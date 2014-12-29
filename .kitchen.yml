@@ -22,3 +22,8 @@ suites:
       - recipe[chef-authldap::default]
     attributes:
       chef-authldap:
+        nss_admin: 'cn=nss_user,dc=example,dc=com'
+        nss_password: 'password'
+        base_dn: 'dc=example,dc=com'
+        base_host: 'ldap://ldap.example.com'
+        home_path: '/home'
