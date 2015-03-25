@@ -54,8 +54,8 @@ template '/etc/nslcd.conf' do
   owner 'root'
   group 'root'
   mode '0640'
-  notifies :restart, 'service[nslcd]'
-  notifies :restart, 'service[unscd]'
+  notifies :restart, 'service[nslcd]', :immediately
+  notifies :restart, 'service[unscd]', :immediately
 end
 
 service 'nslcd' do
